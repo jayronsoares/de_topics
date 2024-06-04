@@ -105,6 +105,7 @@ CREATE TABLE CustomerOrders (
 );
 ```
 
+
 ### 4. **Star Schema**
 
 #### Description:
@@ -142,6 +143,45 @@ CREATE TABLE Time (
   Month VARCHAR(50),
   Year INT
 );
+```
+### 8. Indexing Strategy
+
+#### Description:
+Designing efficient indexing strategies to optimize query performance.
+
+#### Techniques:
+- **Clustered Indexes**: Physically order the data in the table based on the index.
+- **Non-Clustered Indexes**: Logical order that does not affect the physical order.
+- **Composite Indexes**: Indexes on multiple columns.
+- **Full-Text Indexes**: Support full-text search queries.
+
+#### Example:
+```sql
+CREATE INDEX idx_customer_name ON Customers (CustomerName);
+CREATE INDEX idx_order_date_customer ON Orders (OrderDate, CustomerID);
+```
+
+### 9. Referential Integrity and Constraints
+
+#### Description:
+Ensuring data consistency and integrity through the use of constraints.
+
+#### Techniques:
+- **Primary Keys**: Uniquely identify each record in a table.
+- **Foreign Keys**: Ensure that relationships between tables remain consistent.
+- **Unique Constraints**: Ensure that all values in a column or a group of columns are unique.
+- **Check Constraints**: Ensure that all values in a column satisfy a specific condition.
+
+#### Example:
+```sql
+CREATE TABLE Orders (
+  OrderID SERIAL PRIMARY KEY,
+  CustomerID INT,
+  OrderDate DATE,
+  FOREIGN KEY (CustomerID) REFERENCES Customers (CustomerID)
+);
+
+ALTER TABLE Customers ADD CONSTRAINT unique_email UNIQUE (Email);
 ```
 
 ### 5. **Snowflake Schema**
@@ -226,6 +266,24 @@ CREATE TABLE DimTime (
   Year INT
 );
 ```
+
+### 6. Use of Surrogate Keys
+
+#### Description:
+Surrogate keys are artificial keys used as primary keys instead of natural keys to simplify data management and improve performance.
+
+#### Techniques:
+- Generate unique identifiers for each record, typically using sequences or auto-increment columns.
+
+#### Example:
+```sql
+CREATE TABLE Customers (
+  CustomerID SERIAL PRIMARY KEY,
+  CustomerName VARCHAR(255),
+  Email VARCHAR(255)
+);
+```
+
 
 ### 7. **Data Vault Modeling**
 
