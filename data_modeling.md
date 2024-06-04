@@ -26,9 +26,9 @@ Normalization is the process of organizing data to minimize redundancy and impro
 - **1NF (First Normal Form)**: Ensure each column contains atomic values.
 - **2NF (Second Normal Form)**: Remove partial dependencies; ensure all non-key attributes are fully functional dependent on the primary key.
 - **3NF (Third Normal Form)**: Remove transitive dependencies; ensure no non-key attribute depends on another non-key attribute.
-- **First Normal Form (1NF): Eliminate duplicate columns and ensure each column contains atomic values.
-- **Second Normal Form (2NF): Ensure that all non-key attributes are fully dependent on the primary key.
-- **Third Normal Form (3NF): Ensure that all non-key attributes are only dependent on the primary key and not on other non-key attributes.
+- **First Normal Form (1NF):** Eliminate duplicate columns and ensure each column contains atomic values.
+- **Second Normal Form (2NF):** Ensure that all non-key attributes are fully dependent on the primary key.
+- **Third Normal Form (3NF):** Ensure that all non-key attributes are only dependent on the primary key and not on other non-key attributes.
 
 #### Example:
 - **1NF**: A table where each column contains atomic values.
