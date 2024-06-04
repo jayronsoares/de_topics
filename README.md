@@ -23,5 +23,5 @@ In any data-driven initiative, the journey from raw data to actionable insights 
 
 
 <p align="center">
-  <img width="600" height="200" src="![image](https://github.com/jayronsoares/de_topics/assets/248106/75dce156-01d7-46f8-bfbf-6f16ca3754e7)">
+  ![image](https://github.com/jayronsoares/de_topics/assets/248106/75dce156-01d7-46f8-bfbf-6f16ca3754e7)
 </p>
